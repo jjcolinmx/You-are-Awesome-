@@ -22,14 +22,16 @@ class ViewController: UIViewController {
     @IBAction func messageButtonPressed(_ sender: UIButton) {
         print("😎 The message button was pressed")
         
+        let awesomeMessage = "You are Awesome!"
         
-        if messageLabel.text=="You are Awesome!"{
+        
+        if messageLabel.text==awesomeMessage{
             messageLabel.text="You are Great!"
-            imageView.image=UIImage(named: "6263b52ad85b74e780c5f37e085c343e")
+            imageView.image=UIImage(named: "02")
             
         } else {
-            messageLabel.text="You are Awesome!"
-            imageView.image=UIImage(named: "MM-TV-Top10-Moments-From-RuPauls-Drag-Race-Season-11_O6R2C4-1080p30_480")
+            messageLabel.text=awesomeMessage
+            imageView.image=UIImage(named: "03")
         }
         
         
