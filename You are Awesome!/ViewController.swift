@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var imageNumber = 0
+    var messageNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,18 +23,28 @@ class ViewController: UIViewController {
     
     @IBAction func messageButtonPressed(_ sender: UIButton) {
         
-        print(imageNumber)
+        let messages = ["Du bist Grossartig!","Eres lo Maximo!","When they need help, they always call you","You are the Best!", "You are Spectacular!","Nobody can do it better than you!"]
         
-        imageNumber = imageNumber + 1
+        messageLabel.text=messages[Int.random(in: 0...messages.count-1)]
+        imageNumber = Int.random(in: 1...3)
+//        messageLabel.text=messages[messageNumber]
+//        messageNumber += 1
+//        if messageNumber == messages.count{
+//            messageNumber = 0
+//        }
         
-        if imageNumber > 3 {
-            imageNumber = 1
-        }
+//        print(imageNumber)
+//
+//        imageNumber = imageNumber + 1
+//
+//        if imageNumber > 3 {
+//            imageNumber = 1
+//        }
         
-        let imageName = "0\(imageNumber)"   //intepolation of a variable value
+//        let imageName = "0\(imageNumber)"   //intepolation of a variable value//
         
         imageView.image=UIImage(named: "0" + String(imageNumber))   //Casting an Int to String
-        imageView.image=UIImage(named: imageName)
+//        imageView.image=UIImage(named: imageName)
 //        print("😎 The message button was pressed")
 //
 //        let awesomeMessage = "You are Awesome!"
